@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Koda's Bio</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: radial-gradient(circle at center, #0f3d2e, #020b09);
+      font-family: Arial, sans-serif;
+      color: #caffea;
+      overflow: hidden;
+    }
+
+    /* ENTER SCREEN */
+    .enter-screen {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle at center, #0f3d2e, #020b09);
+      z-index: 10;
+      transition: opacity 0.6s ease;
+    }
+
+    .enter-btn {
+      padding: 18px 40px;
+      font-size: 22px;
+      letter-spacing: 2px;
+      color: #19ff9a;
+      background: transparent;
+      border: 2px solid #19ff9a;
+      border-radius: 30px;
+      cursor: pointer;
+      text-transform: uppercase;
+      box-shadow: 0 0 0 rgba(25,255,154,0);
+      transition: box-shadow 0.3s, transform 0.2s;
+    }
+
+    .enter-btn:hover {
+      box-shadow: 0 0 25px rgba(25,255,154,0.9);
+      transform: scale(1.05);
+    }
+
+    /* MAIN BIO */
+    .content {
+      opacity: 0;
+      pointer-events: none;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.8s ease;
+    }
+
+    .content.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .card {
+      width: 90%;
+      max-width: 900px;
+      background: #020b12;
+      border-radius: 18px;
+      padding: 25px;
+      box-shadow: 0 0 40px rgba(0, 255, 150, 0.25);
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .left { flex: 1; }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .pfp {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(0,255,150,0.6);
+    }
+
+    .title {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .bio {
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .friends-title {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .friends {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .friend {
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid #2effb6;
+      color: #2effb6;
+      font-size: 13px;
+      box-shadow: 0 0 10px rgba(0,255,150,0.25);
+    }
+
+    .right {
+      width: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .btn, .music {
+      width: 100%;
+      padding: 10px;
+      border-radius: 20px;
+      background: #19ff9a;
+      color: #003d25;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(0,255,150,0.6);
+    }
+
+    .music {
+      background: transparent;
+      color: #19ff9a;
+      border: 1px solid #19ff9a;
+    }
+
+    .credits {
+      position: fixed;
+      bottom: 15px;
+      background: #020b12;
+      border: 1px solid #19ff9a;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      color: #19ff9a;
+      box-shadow: 0 0 12px rgba(0,255,150,0.4);
+    }
+
+    iframe {
+      display: none;
+    }
+
+    @media (max-width: 700px) {
+      .card { flex-direction: column; }
+      .right { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ENTER -->
+  <div class="enter-screen" id="enterScreen">
+    <button class="enter-btn" onclick="enterSite()">Click To Enter</button>
+  </div>
+
+  <!-- MAIN -->
+  <div class="content" id="content">
+    <iframe
+      id="ytplayer"
+      src=""
+      allow="autoplay"
+    ></iframe>
+
+    <div class="card">
+      <div class="left">
+        <div class="header">
+          <img class="pfp" src="https://image2url.com/r2/default/images/1770523373252-62492dd4-3b70-44c5-a2e5-a4b0b891c0b8.webp">
+          <div class="title">Koda's Bio</div>
+        </div>
+
+        <div class="bio">
+          ☰ Hello, I am Koda. Im 13, I am the owner of new tag 1.7k+<br><br>
+          i do apk method (i dont dev for other people so dont ask & i gate keep all my methods) ☰
+        </div>
+
+        <div class="friends-title">Friends</div>
+        <div class="friends">
+          <div class="friend">WhatDoIDo</div>
+          <div class="friend">PalmTree</div>
+          <div class="friend">Z4eu</div>
+          <div class="friend">Legend</div>
+          <div class="friend">TAB!!</div>
+          <div class="friend">Hallo</div>
+          <div class="friend">Peanut</div>
+          <div class="friend">Dre1mer</div>
+          <div class="friend">Jrvr</div>
+          <div class="friend">Qwizx</div>
+          <div class="friend">Aloraa</div>
+          <div class="friend">Hatred</div>
+          <div class="friend">Tippy</div>
+          <div class="friend">Yoyo</div>
+          <div class="friend">Sleepy</div>
+          <div class="friend">Natural</div>
+          <div class="friend">Desk</div>
+        </div>
+      </div>
+
+      <div class="right">
+        <button class="btn" onclick="window.open('https://discord.gg/newtag')">
+          Join
+        </button>
+        <button class="music" onclick="toggleMute()">Music: OFF</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="credits">Credits: bio made by desk</div>
+
+  <script>
+    let muted = true;
+
+    function enterSite() {
+      document.getElementById("enterScreen").style.opacity = "0";
+      setTimeout(() => {
+        document.getElementById("enterScreen").style.display = "none";
+        document.getElementById("content").classList.add("show");
+
+        // LOAD YOUTUBE AFTER CLICK
+        document.getElementById("ytplayer").src =
+          "https://www.youtube.com/watch?v=tuiOR-iPT10&list=PLXuZRanfWYi7MpwaFKgGdcwfBakJaxscW&index=3";
+      }, 600);
+    }
+
+    function toggleMute() {
+      muted = !muted;
+      const iframe = document.getElementById("ytplayer");
+      iframe.src = iframe.src.replace(
+        muted ? "&mute=0" : "&mute=1",
+        muted ? "&mute=1" : "&mute=0"
+      );
+      event.target.innerText = muted ? "Music: OFF" : "Music: ON";
+    }
+  </script>
+
+</body>
+</html>
